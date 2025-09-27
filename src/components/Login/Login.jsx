@@ -11,6 +11,8 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password);
+        setSuccess(' ');
+        setLoginError(' ');
         if (password.length < 6) {
             setLoginError("Password must be greater than 6 length.");
             return;
@@ -19,6 +21,7 @@ const Login = () => {
             .then((res) => {
                 console.log(res.user);
                 setSuccess("Logged in successfully.")
+                e.target.reset();
             })
             .catch((error) => {
                 console.error(error);
@@ -51,8 +54,8 @@ const Login = () => {
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-primary w-2/3">Login</button>
+                            <div className="form-control mt-6 text-center">
+                                <button className="btn btn-primary w-2/3 ">Login</button>
                             </div>
                         </form>
                         {loginError && <p className="text-red-600 text-xl text-center mb-5">{loginError}</p>}

@@ -20,6 +20,7 @@ const Register = () => {
             .then((res) => {
                 console.log(res.user);
                 setSuccess("User created successfully.")
+                e.target.reset();
             })
             .catch((error) => {
                 console.error(error);
@@ -52,7 +53,7 @@ const Register = () => {
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             </div>
-                            <div className="form-control mt-6">
+                            <div className="form-control mt-6 text-center">
                                 <button className="btn btn-primary w-2/3">Register</button>
                             </div>
                         </form>
