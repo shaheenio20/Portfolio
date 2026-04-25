@@ -42,7 +42,7 @@ const Login = () => {
             <div className="hero bg-base-200 min-h-screen py-10 animate-fade-in-up">
                 <div className="hero-content flex-col lg:flex-row-reverse w-11/12 lg:w-10/12 mx-auto">
                     <div className="text-center lg:text-left p-6 lg:ml-10 animate-slide-in-right">
-                        <h1 className="lg:text-5xl text-3xl font-bold mb-5 pt-20 lg:pt-0 text-primary">Login now</h1>
+                        <h1 className="lg:text-5xl text-3xl font-bold mb-5 text-primary">Login now</h1>
                         <p className="mb-3 text-lg opacity-80">
                             The login page enables existing users to access their accounts by entering their credentials, typically email and password.
                             It verifies the input against stored data and grants access upon successful authentication.

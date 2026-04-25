@@ -40,7 +40,7 @@ const Register = () => {
             <div className="hero bg-base-200 min-h-screen py-10 animate-fade-in-up">
                 <div className="hero-content flex-col lg:flex-row-reverse w-11/12 lg:w-10/12 mx-auto">
                     <div className="text-center lg:text-left p-6 lg:ml-10 animate-slide-in-right">
-                        <h1 className="lg:text-5xl text-3xl font-bold mb-5 pt-20 lg:pt-0 text-primary">Register now</h1>
+                        <h1 className="lg:text-5xl text-3xl font-bold mb-5 text-primary">Register now</h1>
                         <p className="mb-3 text-lg opacity-80">
                             The register page allows new users to create an account by providing details such as name, email,
                             and password. It ensures user data is securely stored and may

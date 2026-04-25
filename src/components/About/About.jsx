@@ -70,10 +70,10 @@ const About = () => {
         <div className="overflow-hidden animate-fade-in-up">
             <div className='bg-base-200'>
                 <div className="hero min-h-screen">
-                    <div className="hero-content flex-col lg:flex-row-reverse w-11/12 lg:w-10/12 mx-auto lg:py-10 py-28">
+                    <div className="hero-content flex-col lg:flex-row-reverse w-11/12 lg:w-10/12 mx-auto lg:py-10 py-16">
                         <div className="max-w-sm lg:text-left text-center animate-slide-in-right" >
                             <img
-                                className='rounded-xl lg:mt-0 mt-10 shadow-2xl hover:scale-105 transition-transform duration-500'
+                                className='rounded-xl shadow-2xl hover:scale-105 transition-transform duration-500'
                                 src={photo} alt="Profile" />
                         </div>
                         <div className="animate-fade-in-up">

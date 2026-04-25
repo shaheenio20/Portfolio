@@ -33,7 +33,7 @@ const Contact = () => {
             })
     }
     return (
-        <div className='bg-base-200 py-24 overflow-hidden'>
+        <div className='bg-base-200 lg:py-24 py-10 overflow-hidden'>
             <div className='w-11/12 lg:w-10/12 mx-auto'>
                 <div className='grid lg:grid-cols-2 grid-cols-1 gap-12 items-center'>
                     <div className='lg:w-[400px] w-full items-center animate-slide-in-right'>
@@ -55,7 +55,7 @@ const Contact = () => {
                                 </div>
                                 <div className='text-base-content'>
                                     <h2 className="text-sm opacity-70">Email</h2>
-                                    <h1 className="text-xl font-bold break-all">shahinurmubarak238@gmail.com</h1>
+                                    <h1 className="text-xl font-bold break-all">rashidcoder238@gmail.com</h1>
                                 </div>
                             </div>
                             <div className='flex gap-6 items-center group cursor-pointer hover:-translate-y-1 transition-transform'>
@@ -64,7 +64,7 @@ const Contact = () => {
                                 </div>
                                 <div className='text-base-content'>
                                     <h2 className="text-sm opacity-70">Call Now</h2>
-                                    <h1 className="text-xl font-bold">+8801792345238</h1>
+                                    <h1 className="text-xl font-bold">+8801823673869</h1>
                                 </div>
                             </div>
                         </div>

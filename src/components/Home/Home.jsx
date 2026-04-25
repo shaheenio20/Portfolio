@@ -47,7 +47,7 @@ const Home = () => {
                     <div className="hero-content flex-col lg:flex-row-reverse w-11/12 lg:w-10/12 mx-auto lg:py-10 py-10">
                         <div className="max-w-sm lg:text-right text-center animate-slide-in-right" >
                             <img
-                                className='rounded-xl lg:mt-0 mt-10 shadow-2xl hover:scale-105 transition-transform duration-500'
+                                className='rounded-xl shadow-2xl hover:scale-105 transition-transform duration-500'
                                 src={photo} alt="Profile" />
                         </div>
                         <div className="animate-fade-in-up">
@@ -73,7 +73,7 @@ const Home = () => {
                                         <p className="mb-2"><strong className="text-primary">CGP: </strong>3.78 out of 4.00</p>
                                         <p className="mb-2"><strong className="text-primary">Department: </strong> Software Engineering</p>
                                         <p className="mb-2"><strong className="text-primary">University: </strong> Metropolitan University</p>
-                                        <p className="mb-2"><strong className="text-primary">Email: </strong> shahinurmubarak238@gmail.com</p>
+                                        <p className="mb-2"><strong className="text-primary">Email: </strong> rashidcoder238@gmail.com</p>
                                     </div>
                                 )}
                                 <div className='py-12'>
