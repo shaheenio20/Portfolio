@@ -8,8 +8,9 @@ const Register = () => {
     const [registerError, setRegisterError] = useState('');
     const handleInRegister = (e) => {
         e.preventDefault();
-        const email = e.target.email.value;
-        const password = e.target.password.value;
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
         setRegisterError(' ');
         if (password.length < 6) {
             setRegisterError("Password must be greater than 6 length.");

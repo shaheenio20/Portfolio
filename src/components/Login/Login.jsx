@@ -8,8 +8,9 @@ const Login = () => {
     const [loginError, setLoginError] = useState('');
     const handleInLogin = (e) => {
         e.preventDefault();
-        const email = e.target.email.value;
-        const password = e.target.password.value;
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
         console.log(email, password);
         setLoginError(' ');
         if (password.length < 6) {
