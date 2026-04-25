@@ -28,7 +28,7 @@ const Register = () => {
                         confirmButton: 'btn btn-primary',
                     }
                 });
-                e.target.reset();
+                form.reset();
             })
             .catch((error) => {
                 console.error(error);
