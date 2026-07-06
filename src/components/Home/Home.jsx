@@ -146,8 +146,7 @@ const Home = () => {
                                             <h1 className='font-bold text-xl mb-4 text-primary'>Explore More Work</h1>
                                             <ul className="space-y-3">
                                                 <li><strong>URL: </strong><a className="text-secondary hover:underline" href='https://makebyme-334f6.web.app/' target="_blank" rel="noreferrer">https://makebyme-334f6.web.app/</a></li>
-                                                <li><strong>URL: </strong><a className="text-secondary hover:underline" href='https://category-d388c.web.app/' target="_blank" rel="noreferrer">https://category-d388c.web.app/</a></li>
-                                                <li><strong>URL: </strong><a className="text-secondary hover:underline" href='https://job-replacement-b25d7.web.app/' target="_blank" rel="noreferrer">https://job-replacement-b25d7.web.app/</a></li>
+                                                <li><strong>URL: </strong><a className="text-secondary hover:underline" href='https://blood-donation-73333.web.app/' target="_blank" rel="noreferrer">https://category-d388c.web.app/</a></li>
                                             </ul>
                                         </div>
                                     </div>
