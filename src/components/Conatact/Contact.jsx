@@ -1,36 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { CiLocationOn } from "react-icons/ci";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneVolume } from "react-icons/fa6";
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import auth from '../../firebase/firebase.config';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
-    const [submitError, setSubmitError] = useState(' ');
-    const [successSubmit, setSuccessSubmit] = useState(' ');
     const handleSubmit = (e) => {
         e.preventDefault();
+        
+        const firstName = e.target.firstName.value;
+        const lastName = e.target.lastName.value;
         const email = e.target.email.value;
-        const password = e.target.password.value;
-        console.log(email, password);
-        setSubmitError(' ');
-        setSuccessSubmit(' ');
-        if (password.length < 6) {
-            setSubmitError("Password must be greater than or equal 6 length.");
-            return;
-        }
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((res) => {
-                console.log(res.user);
-                setSuccessSubmit("Submit successfully.")
-                setSubmitError(' ');
-                e.target.reset();
-            })
-            .catch((error) => {
-                console.error(error);
-                setSubmitError(error.message);
-                setSuccessSubmit('');
-            })
+        const location = e.target.location.value;
+        const message = e.target.message.value;
+        
+        console.log("Contact form submitted:", { firstName, lastName, email, location, message });
+        
+        // Simulate API call for form submission
+        setTimeout(() => {
+            Swal.fire({
+                title: "Success!",
+                text: "Your information has been sent successfully.",
+                icon: "success",
+                confirmButtonColor: "#3085d6",
+            });
+            e.target.reset();
+        }, 500);
     }
     return (
         <div className='bg-base-200 lg:py-24 py-10 overflow-hidden'>
@@ -72,15 +67,27 @@ const Contact = () => {
                     <div className="animate-fade-in-up">
                         <form className="w-full max-w-2xl bg-base-100 p-8 rounded-3xl shadow-2xl border border-base-300 space-y-6 hover:shadow-primary/10 transition-shadow duration-500" onSubmit={handleSubmit}>
                             <h2 className="text-3xl font-bold text-base-content mb-6">Contact Me</h2>
-                            <div>
-                                <label className="block text-sm font-semibold text-base-content/80 mb-2">Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    required
-                                    className="w-full px-5 py-3 bg-base-200 text-base-content border border-base-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                />
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label className="block text-sm font-semibold text-base-content/80 mb-2">First Name</label>
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        name="firstName"
+                                        required
+                                        className="w-full px-5 py-3 bg-base-200 text-base-content border border-base-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block text-sm font-semibold text-base-content/80 mb-2">Last Name</label>
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        name="lastName"
+                                        required
+                                        className="w-full px-5 py-3 bg-base-200 text-base-content border border-base-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                    />
+                                </div>
                             </div>
                             <div>
                                 <label className="block text-sm font-semibold text-base-content/80 mb-2">Email</label>
@@ -88,16 +95,6 @@ const Contact = () => {
                                     type="email"
                                     id="email"
                                     name="email"
-                                    required
-                                    className="w-full px-5 py-3 bg-base-200 text-base-content border border-base-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                                />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-semibold text-base-content/80 mb-2">Password</label>
-                                <input
-                                    type="password"
-                                    id="password"
-                                    name="password"
                                     required
                                     className="w-full px-5 py-3 bg-base-200 text-base-content border border-base-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                                 />
@@ -124,13 +121,11 @@ const Contact = () => {
                             <div className="pt-4">
                                 <button
                                     type="submit"
-                                    className="w-full btn btn-primary btn-lg rounded-xl shadow-lg hover:-translate-y-1 transition-all duration-300"
+                                    className="w-full btn btn-primary rounded-xl shadow-lg hover:-translate-y-1 transition-all duration-300"
                                 >
                                     Submit
                                 </button>
                             </div>
-                            {submitError && submitError.trim() !== '' && <div className="alert alert-error mt-4 rounded-xl shadow-sm"><span className="font-semibold">{submitError}</span></div>}
-                            {successSubmit && successSubmit.trim() !== '' && <div className="alert alert-success mt-4 rounded-xl shadow-sm"><span className="font-semibold text-white">{successSubmit}</span></div>}
                         </form>
                     </div>
                 </div>

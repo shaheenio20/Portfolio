@@ -9,6 +9,8 @@ const Register = () => {
     const handleInRegister = (e) => {
         e.preventDefault();
         const form = e.target;
+        const firstName = form.firstName.value;
+        const lastName = form.lastName.value;
         const email = form.email.value;
         const password = form.password.value;
         setRegisterError(' ');
@@ -52,15 +54,27 @@ const Register = () => {
                         <form className="card-body" onSubmit={handleInRegister}>
                             <div className="form-control">
                                 <label className="label">
+                                    <span className="label-text font-bold">First Name: </span>
+                                </label>
+                                <input type="text" name="firstName" placeholder="First Name" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text font-bold">Last Name: </span>
+                                </label>
+                                <input type="text" name="lastName" placeholder="Last Name" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
                                     <span className="label-text font-bold">Email: </span>
                                 </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
+                                <input type="email" name="email" placeholder="Email" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text font-bold">Password: </span>
                                 </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
+                                <input type="password" name="password" placeholder="Password" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
                             </div>
                             <div className="form-control mt-6 text-center">
                                 <button className="btn btn-primary w-full rounded-xl hover:-translate-y-1 transition-transform">Register</button>

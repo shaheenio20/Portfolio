@@ -65,7 +65,7 @@ const Navbar = () => {
             {/* Mobile Sidebar */}
             <div className={`fixed top-0 left-0 h-full w-64 bg-base-100 shadow-2xl z-[70] transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="flex justify-between items-center p-4 border-b border-base-300">
-                    <span className="text-xl font-bold text-primary">Menu</span>
+                    <span className="text-xl font-bold text-primary">SHAHEEN</span>
                     <button onClick={() => setIsOpen(false)} className="btn btn-ghost btn-sm btn-circle hover:bg-base-300">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                     </button>
