@@ -147,6 +147,7 @@ const Home = () => {
                 <img
                   src={img}
                   alt="Project"
+                  loading="lazy"
                   className="rounded-xl w-full h-[200px] object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </figure>

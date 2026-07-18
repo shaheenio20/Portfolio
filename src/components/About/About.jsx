@@ -9,14 +9,9 @@ import photo3 from "../../assets/images/photo3.jpg";
 import photo4 from "../../assets/images/photo4.jpg";
 import photo5 from "../../assets/images/photo5.jpg";
 import photo6 from "../../assets/images/photo6.jpg";
+import { Link } from "react-router-dom";
 
-const About = () => {
-  const [showProjects, setShowProjects] = useState(false);
-  const handleInProject = () => {
-    setShowProjects(!showProjects);
-  };
-
-  const skills = [
+const skills = [
     {
       name: "JavaScript",
       icon: (
@@ -78,6 +73,8 @@ const About = () => {
       salary: "9,500",
     },
   ];
+
+const About = () => {
   return (
     <div className="overflow-hidden animate-fade-in-up">
       <div className="bg-base-200">
@@ -106,46 +103,9 @@ const About = () => {
                   combining intuitive frontend design with secure backend
                   development and continuously learning new technologies.
                 </p>
-                <button
-                  className="btn btn-primary rounded-xl shadow-lg hover:-translate-y-1 transition-all duration-300"
-                  onClick={handleInProject}
-                >
-                  {showProjects ? "HIDE MY PROJECTS" : "MY PROJECTS"}
-                  <FaArrowRight className="ml-2"></FaArrowRight>
-                </button>
-                {showProjects && (
-                  <div className="bg-base-100 hover:bg-neutral hover:text-neutral-content duration-500 rounded-xl mt-8 shadow-xl animate-zoom-in border border-base-300">
-                    <div className="p-6">
-                      <h1 className="font-bold mb-4 text-primary">
-                        Some specific featured projects:
-                      </h1>
-                      <ul className="space-y-2">
-                        <li>
-                          <strong>URL: </strong>
-                          <a
-                            className="text-secondary hover:underline"
-                            href="https://makebyme-334f6.web.app/"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            https://makebyme-334f6.web.app/
-                          </a>
-                        </li>
-                        <li>
-                          <strong>URL: </strong>
-                          <a
-                            className="text-secondary hover:underline"
-                            href="https://blood-donation-73333.web.app/"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            https://job-replacement-b25d7.web.app/
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
+                <Link to="/projects">
+                    <button className="btn btn-primary outline-none">My Projects</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -204,6 +164,7 @@ const About = () => {
                   <img
                     src={item.img}
                     alt="Research"
+                    loading="lazy"
                     className="rounded-xl w-full h-[200px] object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </figure>

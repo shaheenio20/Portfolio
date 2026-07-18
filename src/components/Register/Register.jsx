@@ -53,28 +53,20 @@ const Register = () => {
                     <div className="card bg-base-100 w-full lg:max-w-sm max-w-xs shrink-0 shadow-2xl animate-zoom-in">
                         <form className="card-body" onSubmit={handleInRegister}>
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text font-bold">First Name: </span>
-                                </label>
-                                <input type="text" name="firstName" placeholder="First Name" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
+                                <label className="block text-sm font-semibold text-base-content/80 mb-2">First Name</label>
+                                <input type="text" name="firstName" placeholder="First Name" className="w-full px-5 py-3 bg-base-200 text-base-content border border-base-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" required />
                             </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text font-bold">Last Name: </span>
-                                </label>
-                                <input type="text" name="lastName" placeholder="Last Name" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
+                            <div className="form-control mt-2">
+                                <label className="block text-sm font-semibold text-base-content/80 mb-2">Last Name</label>
+                                <input type="text" name="lastName" placeholder="Last Name" className="w-full px-5 py-3 bg-base-200 text-base-content border border-base-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" required />
                             </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text font-bold">Email: </span>
-                                </label>
-                                <input type="email" name="email" placeholder="Email" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
+                            <div className="form-control mt-2">
+                                <label className="block text-sm font-semibold text-base-content/80 mb-2">Email</label>
+                                <input type="email" name="email" placeholder="Email" className="w-full px-5 py-3 bg-base-200 text-base-content border border-base-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" required />
                             </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text font-bold">Password: </span>
-                                </label>
-                                <input type="password" name="password" placeholder="Password" className="input input-bordered focus:ring-2 focus:ring-primary focus:outline-none" required />
+                            <div className="form-control mt-2">
+                                <label className="block text-sm font-semibold text-base-content/80 mb-2">Password</label>
+                                <input type="password" name="password" placeholder="Password" className="w-full px-5 py-3 bg-base-200 text-base-content border border-base-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" required />
                             </div>
                             <div className="form-control mt-6 text-center">
                                 <button className="btn btn-primary w-full rounded-xl hover:-translate-y-1 transition-transform">Register</button>

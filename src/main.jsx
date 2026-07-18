@@ -12,6 +12,7 @@ import Service from "./components/Service/Service";
 import Contact from "./components/Conatact/Contact";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import Projects from "./components/Projects/Projects";
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/reg",
         element: <Register></Register>
+      },
+      {
+        path: "/projects",
+        element: <Projects></Projects>
       }
     ],
   },
